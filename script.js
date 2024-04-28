@@ -44,7 +44,13 @@ calculate=()=>{
     }
     
     let p=document.createElement("p");
-    p.innerHTML=`Your Age is ${y3} Years, ${m3} Months and ${d3} Days.`;
+    if(input.value){
+        p.innerHTML=`Your Age is ${y3} Years, ${m3} Months and ${d3} Days.`;
+    }
+    else{
+        p.innerHTML="Enter a valid DATE OF BIRTH";
+        p.style.color="red";
+    }
     row.appendChild(p);
 
 }
